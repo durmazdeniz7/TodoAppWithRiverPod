@@ -2,6 +2,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:todo_app_with_riverpod/models/todo_model.dart';
 import 'package:uuid/uuid.dart';
 
+
+
 class TodoListManager extends StateNotifier<List<TodoModel>> {
   TodoListManager([List<TodoModel>? state]) : super(state ?? []);
 
@@ -34,7 +36,7 @@ class TodoListManager extends StateNotifier<List<TodoModel>> {
     ];
   }
 
-  void remove(TodoModel todoModel){
-    state=state.where((element) => element.id!=todoModel.id).toList();
+  void remove(TodoModel todoModel) {
+    state = state.where((element) => element.id != todoModel.id).toList();
   }
 }
